@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app="chartApp">
+	<head>
+		<meta charset="UTF-8">
+	    <script src="js/d3.v3.min.js"></script>
+    	<script src="js/angular.min.js"></script>
+		<script src="js/graph.js"></script>
+		<style>
+			path {
+				stroke: steelblue;
+				stroke-width: 1;
+				fill: none;
+			}
+		</style>
+	</head>
+<body>
+	<div ng-controller="appController">
+		<graph values="memoryUsage"></graph>
+	</div>
+
+<!-- URL: http://localhost:9200/_plugin/elvis/ -->
+</body>
+</html>
