@@ -50,7 +50,6 @@ public class ESIntegration {
 		XContentBuilder builder = null;
 		try {
 			builder = XContentFactory.jsonBuilder().startObject().startObject(TYPE_NAME).startObject("properties");
-
 			builder.startObject("timestamp").field("type", "date").endObject()
 					.startObject("weeknumber").field("type", "integer").endObject()
 					.startObject("dayofmonth").field("type", "integer").endObject()
@@ -58,8 +57,6 @@ public class ESIntegration {
 					.startObject("responsecode").field("type", "integer").endObject()
 					.startObject("bytes").field("type", "integer").endObject()
 			.endObject().endObject().endObject();
-
-			log.info(builder.prettyPrint());
 		} catch (Exception e) {
 			log.error("Could not define type mapping: " + e);
 		}
